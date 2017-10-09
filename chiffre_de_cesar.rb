@@ -6,9 +6,8 @@ def decalage(la_lettre,le_decalage)
   if (la_lettre >="a" && la_lettre <="z")
     nouvelle_lettre = (la_lettre.ord + le_decalage).chr
     nouvelle_lettre = (nouvelle_lettre.ord - "z".ord + "a".ord - 1).chr if (nouvelle_lettre.ord > "z".ord)
-  end
 
-  if (la_lettre >="A" && la_lettre <="Z")
+  elsif (la_lettre >="A" && la_lettre <="Z")
     nouvelle_lettre = (la_lettre.ord + le_decalage).chr
     nouvelle_lettre = (nouvelle_lettre.ord - "Z".ord + "A".ord - 1).chr if (nouvelle_lettre.ord > "Z".ord)
   end
@@ -28,8 +27,7 @@ end
 def chiffrer_cesar(la_chaine,le_decalage)
   la_chaine_codee = ""
   la_chaine.chars.each do |lettre|
-    lettre = decalage(lettre,le_decalage)
-    la_chaine_codee = la_chaine_codee << lettre
+    la_chaine_codee = la_chaine_codee << decalage(lettre,le_decalage)
   end
 
   return la_chaine_codee
