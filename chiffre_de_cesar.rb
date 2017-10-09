@@ -28,12 +28,10 @@ end
 def chiffrer_cesar(la_chaine,le_decalage)
   la_chaine_codee = ""
   la_chaine.chars.each do |lettre|
-    puts "Ancienne lettre : ",lettre
     lettre = decalage(lettre,le_decalage)
     la_chaine_codee = la_chaine_codee << lettre
   end
 
-  puts "La nouvelle chaine : ",la_chaine_codee
   return la_chaine_codee
 end
 
