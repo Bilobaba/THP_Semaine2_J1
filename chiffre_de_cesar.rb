@@ -38,5 +38,7 @@ puts "Entrez le texte à chiffrer"
 la_chaine_a_chiffrer = gets.chomp()
 puts "Entrez le décalage"
 le_decalage = gets.chomp().to_i
+le_decalage = le_decalage%26
+puts "Le decalage est :",le_decalage
 le_resultat = chiffrer_cesar(la_chaine_a_chiffrer,le_decalage)
 puts "Resultat du chiffrage : ",le_resultat
